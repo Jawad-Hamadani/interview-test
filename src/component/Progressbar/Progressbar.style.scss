@@ -1,0 +1,78 @@
+.circle {
+  border-radius: 50%;
+  background-color: $default-secondary-base-color;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 2rem;
+
+  width: 30px;
+  height: 30px;
+}
+.active-circle {
+  background-color: $default-primary-base-color;
+  color: $white;
+}
+.progress-bar-container {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+  background-color: $default-secondary-light-color;
+  padding: 2rem 0.5rem;
+}
+.progress-item {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+.progress-bar-info {
+  color: $default-secondary-dark-color;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.progress-bar-info-active {
+  color: $black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.progress-div {
+  background-color: $default-secondary-dark-color;
+  border-radius: 0.5rem;
+  width: 100%;
+  height: 0.5rem;
+}
+
+.progress-active {
+  height: 100%;
+  width: 0;
+  background-color: $default-primary-base-color;
+  border-radius: 0.5rem;
+  animation: fill-progress 0.7s linear;
+  animation-fill-mode: forwards;
+}
+.progress-item-flex-child {
+  flex: 1 1 auto;
+  align-self: stretch;
+}
+
+.align-items-center {
+  display: flex;
+  align-items: center;
+}
+
+@keyframes fill-progress {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
